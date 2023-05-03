@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      background-image:url("/static/login.jpg");
+      background-size: cover;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Login here</title>
+</head>
+
+<body>
+  <div class="flex h-screen justify-center items-center">
+    <form class="bg-white p-6 rounded-lg shadow-xl" action="/loginpost" method="POST">
+      <h2 class="text-lg font-medium mb-4">Login</h2>
+
+      <label class="block text-gray-700 font-medium mb-2" for="Username">
+        User name
+      </label>
+
+      <input class="w-full p-2 border border-gray-400 rounded-lg" type="text" id="Username" name="Username"
+      value="" />
+      <br>
+
+      <label class="block text-gray-700 font-medium mb-2" for="password">
+      Password
+      </label>
+
+      <input class="w-full p-2 border border-gray-400 rounded-lg" type="Password" id="Password" name="Password"
+      value=""/>
+      <br>
+      <br>
+      <input type="radio" id="Admin" name="Loginas" value="Admin">
+      <label for="Admin">Admin</label> 
+      <input type="radio" id="Faculty" name="Loginas" value="Doctor">
+      <label for="Faculty">Doctor</label>
+      <input type="radio" id="patient" name="Loginas" value="Patient">
+      <label for="Student">Patient</label>
+      <br>
+      <button class="bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-600">
+        Login
+      </button>
+    </form>
+  </div>
+</body>
+
+</html>
