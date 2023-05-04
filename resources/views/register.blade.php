@@ -19,7 +19,8 @@
 </head>
 
 <body>
-    <form action="/registerpost" method="post">
+    <form action="{{route('users.store')}}" method="post">
+        @csrf
         <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
             <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white">Create User</h2>
 
