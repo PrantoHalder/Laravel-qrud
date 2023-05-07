@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\DoctorDetailController;
+use App\Http\Controllers\DoctorScheduleController;
+use App\Http\Controllers\DoctorTypeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
@@ -20,4 +24,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[WelcomeController::class,"welcome"])->name('welcome');
 Route::get('/login',[LoginController::class,"login"])->name('login');
 Route::get('/register',[RegisterController::class,"register"])->name('register');
-Route::resource('/users',UserController::class);
+Route::resources([
+    "/users" => UserController::class,
+    "/doctortype" => DoctorTypeController::class,
+    "/doctordetails" => DoctorDetailController::class,
+    "/doctorschedule"=>DoctorScheduleController::class,
+    "/apoointment" => AppointmentController::class,
+]);
